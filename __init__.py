@@ -36,11 +36,11 @@ def get_percentage_to_event():
 
 
 # Hackatime stuff
-HACKATIME_PROJECTS = "chessboard,horizons_timeline,ha-todo-badger"
+HACKATIME_PROJECTS = "chessboard,horizons_timeline,ha-todo-badger"  # the names of the Hackatime projects you're using towards Horizons
 HACKATIME_USERNAME = "nirvaannn"
 
 time_worked_on = 0  # in seconds
-TIME_REQUIRED = 20 * 60 * 60  # 20 hours in seconds
+TIME_REQUIRED = 35 * 60 * 60  # 35 hours in seconds
 
 
 def fetch_hackatime():
@@ -217,7 +217,7 @@ while not wifi.is_connected():
 
 
 def update():  # runs in a loop when the app is open
-    badge.mode(FAST_UPDATE)
+    badge.mode(FAST_UPDATE | NON_BLOCKING)
 
     screen.pen = color.white
     screen.clear()
@@ -241,7 +241,7 @@ def update():  # runs in a loop when the app is open
 
     # Hackatime text
     hours_worked = round(time_worked_on / 3600, 2)
-    time_required_hours = TIME_REQUIRED / 3600
+    time_required_hours = round(TIME_REQUIRED / 3600)
     screen.pen = color.black
     screen.text(f"{hours_worked} / {time_required_hours} hours", 30, 100)
 
@@ -253,9 +253,7 @@ def update():  # runs in a loop when the app is open
     draw_gallery(5, 140, projects_data)
 
     badge.update()
-
-    rtc.set_alarm(minutes=10)
-    wait_for_button_or_alarm(timeout=5000)
+    wait_for_button_or_alarm(timeout=600 * 1000)  # 600 seconds
 
 
 run(update)
