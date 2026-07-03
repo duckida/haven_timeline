@@ -1,9 +1,14 @@
 # horizons_timeline
 
+<img width="1000" height="456" alt="IMG_20260701_223135" src="https://github.com/user-attachments/assets/b2244e9f-39e9-40d2-8977-5f71ca9ea620" />
+
+
 ## what
 This project is a countdown to my first every IRL hack club event, Horizons! It runs as an app on the Pimoroni Badger 2350 (an e-ink conference badge with battery power and WiFi).
 
 It counts down days/hours until the event & shows the Hackatime projects you're working on (and how long you've spent on each), so you can see how many more hours you have to do!
+
+here's a [video demo](https://user-cdn.hackclub-assets.com/019f1f9b-ef45-752f-a520-a52f6dfd9af6/VID_20260701_223203_edited_1782941561949133.mp4)!
 
 ## how
 The project is written in MicroPython, throughout the development I learned a lot about things like tuples, classes and inherited classes! 
