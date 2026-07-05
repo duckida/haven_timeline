@@ -252,10 +252,11 @@ def update():  # runs in a loop when the app is open
     # Key
     draw_gallery(5, 140, projects_data)
 
-    rtc.set_alarm(minutes=10)  # set an alarm to wake up after
+    SLEEP_MINUTES = 15
+    rtc.set_alarm(minutes=SLEEP_MINUTES)  # set an alarm to wake up after
 
     badge.update()
-    wait_for_button_or_alarm(timeout=600 * 1000)  # 600 seconds
+    wait_for_button_or_alarm(timeout=SLEEP_MINUTES * 60 * 1000)  # 600 seconds
 
 
 def on_exit():
