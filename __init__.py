@@ -6,10 +6,11 @@ import requests
 import wifi
 
 # Fetch signups
+HAVEN_EVENT_LOCATION = "london" # the best haven :D
 def fetch_signups():
     data = requests.get("https://haven.hackclub.com/api/signups").json()
     for event in data["events"]:
-        if event["slug"] == "london":
+        if event["slug"] == HAVEN_EVENT_LOCATION:
             return int(event["signups"])
 
 
