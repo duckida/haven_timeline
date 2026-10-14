@@ -1,7 +1,13 @@
 # haven timeline
 
+<img width="1407" height="635" alt="Screenshot 2026-10-14 at 7 00 04 PM" src="https://github.com/user-attachments/assets/15c4710b-0a65-4a4f-9d80-491de86fe82d" />
+
+
+
 ## what
 This project is a countdown to [Hack Club Haven](https://hack.club/havenldn)! It runs as an app on the Pimoroni Badger 2350 (an e-ink conference badge with battery power and WiFi).
+
+Based on my [previous version](https://github.com/duckida/horizons_timeline) for Hack Club Horizons!
 
 It counts down days/hours until the event & shows the number of signups to the event pulled through the Haven signups API!
 
