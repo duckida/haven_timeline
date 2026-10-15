@@ -1,7 +1,6 @@
 import math
 import time
 from random import choice
-import rtc
 import requests
 import wifi
 
