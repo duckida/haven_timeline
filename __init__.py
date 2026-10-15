@@ -1,7 +1,7 @@
 import math
 import time
 from random import choice
-
+import rtc
 import requests
 import wifi
 
@@ -127,8 +127,9 @@ def update():  # runs in a loop when the app is open
     time_bar.set_progress(get_percentage_to_event())
     time_bar.draw()
 
-    # Hackatime stuff
+    # Signups stuff
     wifi.connect()
+    rtc.time_from_ntp()
     signups = fetch_signups()  # fetch the projects
 
     # Hackatime text
